@@ -5,6 +5,11 @@ blue: #89ABE3FF
 dark green:#006B38FF
 black:#101820FF
 */
+@import url('//fonts.googleapis.com/css?family=Roboto:500');
+
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+
 
 *{
     margin: 0;
@@ -30,7 +35,7 @@ body::-webkit-scrollbar {
 }
 
 .container{
-    padding: 10px 10%;
+    padding: 10px 5%;
 }
 
 .logo{
@@ -105,16 +110,21 @@ nav ul li a:hover::after{
 .sub{
     font-size: 60px;
     font-weight: 600;
-    color: #FCF6F5FF;
+    color: #006B38FF;
 }
 
 .about-col p{
     margin: 20px 0px;
+    color: #FCF6F5FF;
 }
 
 .tab-title{
     display: flex;
     /* margin: 20px 0 40px; */
+}
+
+.tab-title p{
+    color: #FCF6F5FF;
 }
 
 .tab-link{
@@ -206,3 +216,172 @@ nav ul li a:hover::after{
     transform: translateY(-10px);
 }
 
+#certifications{
+    padding: 50px 0;
+}
+
+.certificate-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.certificate{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.certificate img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    color: #FCF6F5FF;
+    margin-top: 30px;
+}
+
+.social-media{
+    margin-top: 30px;
+}
+
+.social-media a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-media i{
+    color:#FCF6F5FF;
+
+}
+
+.social-media a i:hover{
+    color: #006B38FF;
+    transform: translateY(-5px);
+}
+
+
+.contact-left p i{
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+
+#wrap {
+    font-family: helvetica, sans-serif;
+    /* background: #e9f0f4; */
+    margin-top: 30px;
+    text-align: center;
+    margin-left: -5px;
+}
+
+.btn-slide, .btn-slide2 {
+    position: relative;
+    display: block;
+    height: 50px;
+    width: 200px;
+    line-height: 50px;
+    padding: 0;
+    border-radius: 50px;
+    background: #006B38FF;
+    border: 2px solid #fff;
+    /* margin: 10px; */
+    transition: .5s;
+}
+
+.btn-slide2 {
+    border: 2px solid #006B38FF;
+}
+
+.btn-slide:hover {
+    background-color: #006B38FF;
+}
+
+.btn-slide2:hover {
+    background-color: #006B38FF;
+}
+
+.btn-slide:hover span.circle, .btn-slide2:hover span.circle2 {
+    left: 100%;
+    margin-left: -45px;
+    background-color: #fdfdfd;
+    color: #006B38FF;
+}
+
+.btn-slide2:hover span.circle2 {
+    color: #006B38FF;
+}
+
+.btn-slide:hover span.title, .btn-slide2:hover span.title2 {
+    left: 40px;
+    opacity: 0;
+}
+
+.btn-slide:hover span.title-hover, .btn-slide2:hover span.title-hover2 {
+    opacity: 1;
+    left: 40px;
+}
+
+.btn-slide span.circle, .btn-slide2 span.circle2 {
+    display: block;
+    background-color: #006B38FF;
+    color: #006B38FF;
+    position: absolute;
+    float: left;
+    margin: 3px;
+    line-height: 42px;
+    height: 40px;
+    width: 40px;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    border-radius: 50%;
+}
+
+.btn-slide2 span.circle2 {
+    background-color: #fff;
+}
+
+.btn-slide span.title,
+  .btn-slide span.title-hover, .btn-slide2 span.title2,
+  .btn-slide2 span.title-hover2 {
+    position: absolute;
+    left: 90px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    transition: .5s;
+}
+
+.btn-slide2 span.title2,
+  .btn-slide2 span.title-hover2 {
+    color: #fff;
+    left: 80px;
+  }
+
+.btn-slide span.title-hover, .btn-slide2 span.title-hover2 {
+    left: 80px;
+    opacity: 0;
+}
+
+.btn-slide span.title-hover, .btn-slide2 span.title-hover2 {
+    color: #fff;
+}
