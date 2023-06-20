@@ -217,6 +217,7 @@ nav ul li a:hover::after{
 .project-list div:hover{
     background: #006B38FF;
     transform: translateY(-10px);
+    cursor: pointer;
 }
 
 #certifications{
