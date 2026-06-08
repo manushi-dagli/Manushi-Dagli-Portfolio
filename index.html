@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manushi Dagli | Software Engineer</title>
+  <meta name="description" content="Software Engineer specializing in GenAI, distributed systems, and full-stack development for Fortune 500 clients." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="bracket">&lt;</span>MD<span class="bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="resume/Manushi_Dagli.pdf" target="_blank" class="btn-resume">Resume <span class="btn-arrow">↗</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="home">
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-badge">
+        <span class="pulse-dot"></span> Open to new opportunities
+      </div>
+      <h1 class="hero-name">
+        <span class="line-1">Manushi</span>
+        <span class="line-2">Dagli<span class="accent-dot">.</span></span>
+      </h1>
+      <div class="hero-role">
+        <span class="role-static">I build&nbsp;</span>
+        <span class="role-typed" id="typed"></span><span class="caret">|</span>
+      </div>
+      <p class="hero-sub">
+        Software Engineer crafting <em>GenAI systems</em>, distributed backends,<br class="br-desk" />
+        and elegant frontends for Fortune 500 enterprises.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat">
+          <span class="hstat-n" data-target="2">0</span><span class="hstat-plus">+</span>
+          <span class="hstat-l">Years Exp</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-target="5">0</span><span class="hstat-plus">+</span>
+          <span class="hstat-l">Fortune 500 Clients</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-n" data-target="100">0</span><span class="hstat-plus">K+</span>
+          <span class="hstat-l">Concurrent Users</span>
+        </div>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/manushi-dagli" target="_blank" class="soc-link" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/manushi-dagli/" target="_blank" class="soc-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:manushidagli2512@gmail.com" class="soc-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">// 01. about</span>
+        <h2 class="sec-title">Who Am I</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p class="about-lead">
+            Software Engineer with <strong>2+ years</strong> delivering feature-level work end-to-end across GenAI services, distributed backends, and full-stack systems serving Fortune 500 enterprise clients.
+          </p>
+          <p>
+            I'm skilled across the entire product surface — architecture, backend, frontend, and optimization — with deep experience in RAG, AWS, and scalable system design. I mentor peers, lead by influence, and coordinate directly with external vendors and cross-functional stakeholders.
+          </p>
+          <p>
+            Outside engineering, I enjoy sports, dancing, cooking, reading historical books, and traveling — staying curious in everything I do.
+          </p>
+          <div class="about-chips">
+            <span class="chip">GenAI Systems</span>
+            <span class="chip">Distributed Systems</span>
+            <span class="chip">Full-Stack</span>
+            <span class="chip">RAG Architecture</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Responsible AI</span>
+          </div>
+          <a href="resume/Manushi_Dagli.pdf" target="_blank" class="btn btn-primary mt-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            Download Resume
+          </a>
+        </div>
+        <div class="terminal reveal">
+          <div class="term-bar">
+            <span class="term-btn r"></span>
+            <span class="term-btn y"></span>
+            <span class="term-btn g"></span>
+            <span class="term-title">manushi@portfolio ~ </span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="prompt">$&nbsp;</span><span class="cmd">whoami</span></div>
+            <div class="term-out">manushi.dagli</div>
+            <div class="term-line"><span class="prompt">$&nbsp;</span><span class="cmd">cat profile.json</span></div>
+            <div class="term-out">
+              <span class="j-brace">{</span><br>
+              &nbsp;&nbsp;<span class="j-key">"role"</span>: <span class="j-str">"Software Engineer"</span>,<br>
+              &nbsp;&nbsp;<span class="j-key">"company"</span>: <span class="j-str">"Jeavio Pvt. Ltd."</span>,<br>
+              &nbsp;&nbsp;<span class="j-key">"location"</span>: <span class="j-str">"Vadodara, India"</span>,<br>
+              &nbsp;&nbsp;<span class="j-key">"specialties"</span>: [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="j-str">"GenAI &amp; RAG"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="j-str">"Distributed Systems"</span>,<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;<span class="j-str">"Full-Stack Engineering"</span><br>
+              &nbsp;&nbsp;],<br>
+              &nbsp;&nbsp;<span class="j-key">"open_to_work"</span>: <span class="j-bool">true</span><br>
+              <span class="j-brace">}</span>
+            </div>
+            <div class="term-line"><span class="prompt">$&nbsp;</span><span class="cmd blink-caret">_</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">// 02. skills</span>
+        <h2 class="sec-title">Tech Stack</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card glass reveal">
+          <div class="skill-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Languages</h3>
+          <div class="stags">
+            <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Java</span><span>C++</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Frontend</h3>
+          <div class="stags">
+            <span class="hot">React</span><span class="hot">TypeScript</span><span>Design Systems</span><span>HTML/CSS</span><span>Strapi CMS</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+          <h3>Backend &amp; APIs</h3>
+          <div class="stags">
+            <span>FastAPI</span><span>Flask</span><span>Node.js</span><span>Spring Boot</span><span>REST</span><span>Microservices</span><span>RabbitMQ</span><span>Kafka</span><span>JWT</span><span>RBAC</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-ico ai-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3>AI / ML</h3>
+          <div class="stags">
+            <span class="glow-tag">RAG Architectures</span><span class="glow-tag">LangChain</span><span class="glow-tag">LLM Integration</span><span>Embeddings</span><span>Vector Databases</span><span>Prompt Engineering</span><span>AWS Rekognition</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Databases</h3>
+          <div class="stags">
+            <span>PostgreSQL</span><span>PgVector</span><span>MySQL</span><span>MongoDB</span><span>Redis</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass reveal">
+          <div class="skill-ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="stags">
+            <span>AWS</span><span>EC2 / S3</span><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span><span>SonarQube</span><span>JMeter</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">// 03. experience</span>
+        <h2 class="sec-title">Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head">
+              <div class="tl-meta">
+                <h3>Software Engineer – 1</h3>
+                <p class="tl-company">Jeavio (India) Pvt. Ltd. &nbsp;·&nbsp; Vadodara, India</p>
+              </div>
+              <span class="tl-date">May 2025 – Present</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Owned end-to-end delivery of a Python-based <strong>Facial Recognition microservice on AWS Rekognition</strong> adopted across 3 product lines, halving inference time in a follow-up optimization.</li>
+              <li>Delivered a production-grade <strong>AI Analytics MVP in 3 days</strong> — from scoping through staging deployment and feedback incorporation.</li>
+              <li>Led complete redesign of the platform's <strong>multi-role RBAC</strong> framework and user identity model without disrupting existing functionality.</li>
+              <li>Owned production reliability across <strong>5+ Fortune 500 client events at 100K+ concurrent-user scale</strong>, sustaining zero downtime.</li>
+              <li>Built a component-based <strong>Design System</strong> to accelerate frontend delivery; mentored 2 engineers through onboarding.</li>
+              <li>Drove load testing with <strong>Apache JMeter</strong>, authored scalability docs, and introduced SonarQube / ESLint standards codebase-wide.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>AWS Rekognition</span><span>Python</span><span>RBAC</span><span>Design System</span><span>JMeter</span><span>SonarQube</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item reveal">
+          <div class="tl-dot"></div>
+          <div class="tl-card glass">
+            <div class="tl-head">
+              <div class="tl-meta">
+                <h3>Associate Software Engineer</h3>
+                <p class="tl-company">Jeavio (India) Pvt. Ltd. &nbsp;·&nbsp; Vadodara, India</p>
+              </div>
+              <span class="tl-date">May 2024 – May 2025</span>
+            </div>
+            <ul class="tl-bullets">
+              <li>Designed and shipped production-grade <strong>GenAI systems using RAG</strong> with LangChain and PgVector, improving context retrieval accuracy by <strong>15–20%</strong>.</li>
+              <li>Built LLM observability — benchmarking across OpenAI and Anthropic, designing intent detection strategies, reducing inference latency.</li>
+              <li>Enforced Responsible AI and data privacy with RBAC and compliant access controls across all model endpoints.</li>
+              <li>Optimized <strong>PostgreSQL + PgVector</strong> indexes for efficient similarity search over large-scale document corpora.</li>
+            </ul>
+            <div class="tl-tags">
+              <span>RAG</span><span>LangChain</span><span>PgVector</span><span>LLM Evaluation</span><span>PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════ -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">// 04. projects</span>
+        <h2 class="sec-title">Things I've Built</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="proj-card glass reveal">
+          <div class="proj-top">
+            <span class="proj-emoji">⚙️</span>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="proj-gh" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3>Distributed Job Scheduler</h3>
+          <p>Self-hosted job orchestration with REST-submitted task DAGs. Resolves dependencies via topological sort, dispatches to RabbitMQ workers for parallel execution with state-machine tracking and crash recovery.</p>
+          <div class="proj-tech">
+            <span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>RabbitMQ</span><span>Redis</span><span>Docker</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass reveal">
+          <div class="proj-top">
+            <span class="proj-emoji">🧠</span>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="proj-gh" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3>EngageHub – AI Mental Health Platform</h3>
+          <p>AI-driven employee mental health survey platform using LLMs to analyze sentiment, track well-being trends, and surface actionable insights for HR teams in real time.</p>
+          <div class="proj-tech">
+            <span>ReactJS</span><span>Python</span><span>PostgreSQL</span><span>LLM</span><span>AWS</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass reveal">
+          <div class="proj-top">
+            <span class="proj-emoji">☁️</span>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="proj-gh" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3>CloudPal – AWS Architecture Automation</h3>
+          <p>AI-powered tool that translates natural language infrastructure descriptions into optimised AWS architecture diagrams and IaC configurations with cost recommendations.</p>
+          <div class="proj-tech">
+            <span>ReactJS</span><span>Python</span><span>Supabase</span><span>LLM APIs</span><span>AWS</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass reveal">
+          <div class="proj-top">
+            <span class="proj-emoji">📚</span>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="proj-gh" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3>Digital Curriculum Management Platform</h3>
+          <p>Secure multi-tenant university curriculum platform with strict data isolation. Apache Kafka enables real-time event-driven updates across microservices, minimising inter-service coupling.</p>
+          <div class="proj-tech">
+            <span>Spring Boot</span><span>React</span><span>MySQL</span><span>JWT</span><span>Apache Kafka</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass reveal">
+          <div class="proj-top">
+            <span class="proj-emoji">💰</span>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="proj-gh" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3>AI-Driven Reimbursement Platform</h3>
+          <p>Jeavio Tech Challenge winner. LLM-based document parsing with structured output validation reduced manual HR reimbursement processing effort by <strong>60%</strong>.</p>
+          <div class="proj-tech">
+            <span>Python</span><span>LLM APIs</span><span>REST</span><span>Document Parsing</span>
+          </div>
+        </div>
+
+        <div class="proj-card glass reveal">
+          <div class="proj-top">
+            <span class="proj-emoji">🏥</span>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="proj-gh" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+          </div>
+          <h3>Health Utopia – Healthcare Platform</h3>
+          <p>Full-stack healthcare fitness platform connecting patients with fitness resources, health tracking, and personalised recommendations through a dynamic, responsive web interface.</p>
+          <div class="proj-tech">
+            <span>HTML/CSS</span><span>JavaScript</span><span>jQuery</span><span>Node.js</span><span>MySQL</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EDUCATION ═══════════════════════ -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">// 05. education</span>
+        <h2 class="sec-title">Academic Background</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card glass reveal">
+          <div class="edu-ico">🎓</div>
+          <div class="edu-body">
+            <h3>B.Tech in Information Technology</h3>
+            <p class="edu-school">Dharmsinh Desai University, Nadiad, India</p>
+            <p class="edu-date">Aug 2020 – May 2024</p>
+            <div class="gpa-bar-wrap">
+              <span class="gpa-label">GPA</span>
+              <div class="gpa-bar"><div class="gpa-fill" data-pct="88"></div></div>
+              <span class="gpa-val">8.80 / 10.00</span>
+            </div>
+          </div>
+        </div>
+        <div class="edu-card glass reveal">
+          <div class="edu-ico">🏆</div>
+          <div class="edu-body">
+            <h3>Event Lead — CodeChef Chapter</h3>
+            <p class="edu-school">Dharmsinh Desai University</p>
+            <p class="edu-date">During B.Tech</p>
+            <p>Organised competitive programming contests in partnership with CodeChef, mentoring <strong>100+ students</strong> in algorithmic problem-solving and data structures.</p>
+          </div>
+        </div>
+        <div class="edu-card glass reveal">
+          <div class="edu-ico">☁️</div>
+          <div class="edu-body">
+            <h3>AWS Academy Cloud Foundations</h3>
+            <p class="edu-school">Amazon Web Services</p>
+            <p class="edu-date">2023</p>
+            <p>Certification in cloud computing fundamentals, AWS core services, and cloud architecture principles.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-tag">// 06. contact</span>
+        <h2 class="sec-title">Get In Touch</h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-left reveal">
+          <p class="contact-intro">
+            Whether you have an exciting opportunity, a challenging problem to solve, or just want to say hello — my inbox is always open.
+          </p>
+          <div class="contact-list">
+            <a href="mailto:manushidagli2512@gmail.com" class="citem">
+              <div class="citem-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <span>manushidagli2512@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/manushi-dagli/" target="_blank" class="citem">
+              <div class="citem-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <span>linkedin.com/in/manushi-dagli</span>
+            </a>
+            <a href="https://github.com/manushi-dagli" target="_blank" class="citem">
+              <div class="citem-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <span>github.com/manushi-dagli</span>
+            </a>
+            <a href="tel:+919426618679" class="citem">
+              <div class="citem-ico">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              </div>
+              <span>+91-94266-18679</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-right reveal">
+          <a href="mailto:manushidagli2512@gmail.com" class="btn btn-primary btn-xl">Say Hello 👋</a>
+          <a href="resume/Manushi_Dagli.pdf" target="_blank" class="btn btn-outline btn-xl">View Resume ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; built by <span class="accent-text">Manushi Dagli</span></p>
+      <p class="footer-sub">Great engineering deserves great presentation.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
